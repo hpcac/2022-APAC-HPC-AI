@@ -1,0 +1,24 @@
+channels:
+  - rapidsai
+  - nvidia
+  - conda-forge
+dependencies:
+# Base
+  - python=3.8
+  - cudatoolkit=11.5
+  - ipython
+  - pip
+# RAPIDS
+  - cudf=22.06
+  - dask-cudf=22.06
+  - dask-cuda=22.06
+  - ucx-py=0.26
+  - ucx-proc=*=gpu
+# UCX Build
+  - libtool
+  - cmake
+  - automake
+  - autoconf
+# UCX-Py Build
+  - cython
+  - pkg-config
