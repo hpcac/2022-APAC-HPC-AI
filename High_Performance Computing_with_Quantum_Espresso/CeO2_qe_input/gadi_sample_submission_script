@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l walltime=00:10:00
+#PBS -l ncpus=48
+#PBS -l mem=190gb
+#PBS -l software=qe
+#PBS -l wd
+
+module load openmpi/4.1.2
+module load qe/7.0
+export OMP_NUM_THREADS=1
+
+mpirun pw.x -npool 1 -ndiag 1 -inp CeO2.in > CeO2.out
+
